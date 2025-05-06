@@ -13,8 +13,8 @@ users = mongo.db.users
 @app.route('/')
 def home():
     if 'username' in session:
-        
-        return redirect(url_for('login'))
+
+        return redirect(url_for('dashboard'))
 
 
 @app.route('/register', methods=['GET', 'POST'])
