@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Maharishi Skill Training Institute</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f4f6f9;
+    }
+
+/* Basic styles for navigation */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  padding: 10px 20px;
+}
+
+nav .logo {
+  display: flex;
+  align-items: center;
+}
+
+nav .logo img {
+  width: 40px;
+  margin-right: 10px;
+}
+
+nav .logo span {
+  color: white;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+nav ul {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  margin-left: 20px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.1em;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Styles for hamburger menu (hidden by default on desktop) */
+.hamburger-menu {
+  display: none;
+  font-size: 2em;
+  color: white;
+  cursor: pointer;
+}
+
+/* Media query for mobile screens (max-width 768px) */
+@media (max-width: 768px) {
+  nav ul {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  nav ul li {
+    margin: 10px 0;
+  }
+
+  .hamburger-menu {
+    display: block;
+  }
+
+  nav ul.active {
+    display: flex;
+  }
+}
+
+
+    .hero {
+      height: 100vh;
+      background: url('static/images/bammer.jpg') no-repeat center center/cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-align: center;
+      padding: 2em;
+    }
+
+    .hero h1 {
+      font-size: 3em;
+      margin: 0.5em 0;
+      color: #faf3eb; /* soft, warm off-white */
+    }
+
+    .hero p {
+      font-size: 1.2em;
+    }
+
+    .section-alt {
+      padding: 4em 2em;
+      background: white;
+    }
+
+    .heading {
+      text-align: center;
+      font-size: 2.5em;
+      margin-bottom: 1em;
+    }
+
+    .box-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2em;
+      justify-content: center;
+    }
+
+    .box {
+      background: white;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      padding: 2em;
+      width: 300px;
+      text-align: center;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.05);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .box:hover {
+      transform: scale(1.05);
+      box-shadow: 0 16px 32px rgba(0,0,0,0.1);
+    }
+
+    .box img {
+      width: 80px;
+      height: 80px;
+      margin-bottom: 1em;
+    }
+
+    .box h3 {
+      margin: 0.5em 0;
+      font-size: 1.5em;
+    }
+
+    .box p {
+      font-size: 0.9em;
+      color: #555;
+    }
+
+    .course-card {
+      background: white;
+      border-radius: 10px;
+      padding: 2em;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+      transition: transform 0.4s ease, box-shadow 0.3s ease;
+      position: relative;
+      overflow: hidden;
+      transform: scale(1);
+    }
+
+    .course-card:hover {
+      transform: scale(1.05);
+      background: #f9fcff;
+      box-shadow: 0 16px 32px rgba(0,0,0,0.15);
+    }
+        /* Footer Styles */
+    footer {
+      background-color: #333;
+      color: white;
+      padding: 2em 0;
+      text-align: center;
+    }
+
+    footer .social-icons {
+      margin: 20px 0;
+    }
+
+    footer .social-icons a {
+      color: white;
+      font-size: 1.5em;
+      margin: 0 10px;
+      text-decoration: none;
+    }
+
+    footer .social-icons a:hover {
+      color: #f9fcff;
+    }
+
+    footer p {
+      margin-top: 20px;
+      font-size: 1em;
+    }
+  </style>
+</head>
+<body>
+ <nav>
+  <div class="logo">
+    <img src="static/images/maha.png" alt="Maharishi Skill Training Institute Logo" >
+    <span>Maharishi Skill Training Institute</span>
+  </div>
+  <ul>
+    <li><a href="#">Home</a></li>
+    <li><a href="#courses">Courses</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <!-- Hamburger icon for mobile -->
+  <div class="hamburger-menu" onclick="toggleMenu()">
+    &#9776;
+  </div>
+</nav>
+  <section class="hero">
+  <div>
+    <h1>Empower Your Future with Maharishi</h1>
+    <p>Explore our expert-led diploma courses and build your career today.</p>
+  </div>
+</section>
+
+<section id="courses" class="section-alt" data-aos="fade-up">
+  <h2 class="heading">Our Courses</h2>
+  <div class="box-container">
+    <div class="box course-card">
+      <img src="{{ url_for('static', filename='images/manager.png') }}" alt="Course 1">
+      <h3><a href="dhm.html">Diploma in Hospital Management (DHM)</a></h3>
+      <p>Learn the skills to manage and lead in the healthcare industry.</p>
+    </div>
+    <div class="box course-card">
+      <img src="{{ url_for('static', filename='images/nurse.png') }}" alt="Course 2">
+      <h3><a href="{{ url_for('dgda_course') }}">Diploma in General Duty Nursing Assistant (DGDA)</a></h3>
+      <p>Prepare for a rewarding career as a nursing assistant with essential medical knowledge.</p>
+    </div>
+    <div class="box course-card">
+      <img src="{{ url_for('static', filename='images/2248432.png') }}" alt="Course 3">
+      <h3><a href="{{ url_for('dxrt_course') }}">Diploma in X-Ray Technology (DXRT)</a></h3>
+      <p>Gain expertise in radiography and medical imaging techniques.</p>
+    </div>
+    <div class="box course-card">
+      <img src="{{ url_for('static', filename='images/6401475.png') }}" alt="Course 4">
+      <h3><a href="{{ url_for('dmlta_course') }}">Diploma in Medical Lab Technician Assistant (DMLTA)</a></h3>
+      <p>Become proficient in lab operations, testing, and diagnostics.</p>
+    </div>
+    <div class="box course-card">
+      <img src="{{ url_for('static', filename='images/4850909.png') }}" alt="Course 5">
+      <h3><a href="{{ url_for('dna') }}">Diploma in Nursing Assistance (DNA)</a></h3>
+      <p>Learn to provide essential care and support in healthcare settings.</p>
+    </div>
+    <div class="box course-card">
+      <img src="{{ url_for('static', filename='images/13911032.png') }}" alt="Course 6">
+      <h3><a href="{{ url_for('dhmct') }}">DHMT - Hotel Management & Catering</a></h3>
+      <p>Prepare for a successful career in the hospitality and catering industries.</p>
+    </div>
+    <div class="box course-card">
+      <img src="{{ url_for('static', filename='images/12404215.png') }}" alt="Course 7">
+      <h3><a href="{{ url_for('dpsm') }}">DPSM - Pre School Management</a></h3>
+      <p>Learn to manage and lead in the early childhood education sector.</p>
+    </div>
+    <div class="box course-card">
+      <img src="{{ url_for('static', filename='images/1683726.png') }}" alt="Course 8">
+      <h3><a href="{{ url_for('dct') }}">DCT - Catering Technology</a></h3>
+      <p>Gain the skills to thrive in the food service and catering industry.</p>
+    </div>
+    <div class="box course-card">
+      <img src="{{ url_for('static', filename='images/6041242.png') }}" alt="Course 9">
+      <h3><a href="{{ url_for('difp') }}">DIFP - Food Production</a></h3>
+      <p>Master food production techniques and kitchen management.</p>
+    </div>
+  </div>
+</section>
+   <!-- Footer Section -->
+  <footer>
+    <div class="social-icons">
+      <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+      <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+      <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+      <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+    </div>
+    <p>&copy; 2025 Maharishi Skill Training Institute. All rights reserved.</p>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: true
+    });
+
+  function toggleMenu() {
+    const menu = document.querySelector('nav ul');
+    menu.classList.toggle('active');
+  }
+
+
+  </script>
+</body>
+</html>
